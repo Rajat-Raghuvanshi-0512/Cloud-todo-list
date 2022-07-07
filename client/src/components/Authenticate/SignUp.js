@@ -23,6 +23,9 @@ function SignUp() {
 
     const PostData = async (e) => {
         e.preventDefault();
+        if (details.password !== details.cpassword) {
+            return alert.error("Passwords donot match")
+        }
         dispatch(registerUser(details))
     }
     useEffect(() => {

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { changePass } from "../../Redux/Actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useAlert } from "react-alert";
+import Loader from "../Loader/Loader";
 
 
 function UpdatePassword() {
@@ -47,7 +48,7 @@ function UpdatePassword() {
     return (
         <>
             {
-                loading ? "Loading..." :
+                loading ? <Loader /> :
                     <div className='py-4 px-10 md:px-20 overflow-y-auto w-full bg-gray-50 h-[100vh]' >
 
                         <div className='flex justify-between items-center'>
