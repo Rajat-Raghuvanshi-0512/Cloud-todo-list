@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { useAlert } from 'react-alert'
+import Loader from '../Loader/Loader'
 
 const Profile = () => {
     const { user, loading, error } = useSelector(state => state.user)
